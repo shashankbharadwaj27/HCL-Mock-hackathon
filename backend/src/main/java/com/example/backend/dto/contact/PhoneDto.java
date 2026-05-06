@@ -1,5 +1,6 @@
 package com.example.backend.dto.contact;
 
+import com.example.backend.entity.ContactPhone;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
@@ -26,7 +27,7 @@ public class PhoneDto {
         PhoneDto dto = new PhoneDto();
         dto.setId(phone.getId());
         dto.setPhoneNumber(phone.getPhoneNumber());
-        dto.setLabel(phone.getLabel());
+        dto.setLabel(String.valueOf(phone.getLabel()));
         dto.setPrimary(phone.isPrimary());
         return dto;
     }

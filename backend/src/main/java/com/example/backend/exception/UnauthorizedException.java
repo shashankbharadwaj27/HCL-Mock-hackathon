@@ -1,7 +1,7 @@
 package com.example.backend.exception;
 
 public class UnauthorizedException extends Exception {
-    UnauthorizedException(String message) {
+    public UnauthorizedException(String message) {
         super(message);
     }
 }

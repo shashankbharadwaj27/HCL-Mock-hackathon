@@ -1,5 +1,6 @@
 package com.example.backend.dto.contact;
 
+import com.example.backend.entity.Contact;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
