@@ -6,6 +6,8 @@ import com.example.backend.dto.auth.RegisterRequest;
 import com.example.backend.entity.User;
 import com.example.backend.exception.ResourceNotFoundException;
 import com.example.backend.exception.UnauthorizedException;
+import com.example.backend.security.CookieConfig;
+import com.example.backend.security.JwtUtil;
 import com.example.backend.repository.UserRepository;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

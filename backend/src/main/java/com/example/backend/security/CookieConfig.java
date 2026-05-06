@@ -1,6 +1,5 @@
 package com.example.backend.security;
 
-
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -22,7 +21,6 @@ public class CookieConfig {
         cookie.setSecure(secure);
         cookie.setPath("/");
         cookie.setMaxAge(24 * 60 * 60); // 24 hours — matches JWT expiry
-        // SameSite isn't directly on Cookie API; set via header if needed
         return cookie;
     }
 
@@ -33,5 +31,9 @@ public class CookieConfig {
         cookie.setPath("/");
         cookie.setMaxAge(0);
         return cookie;
+    }
+
+    public Cookie clearJwtCookie() {
+        return buildExpiredJwtCookie();  // delegate — same behavior
     }
 }
